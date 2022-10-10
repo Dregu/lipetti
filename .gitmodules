@@ -1,0 +1,3 @@
+[submodule "www/font/jQuery-Mobile-Icon-Pack"]
+	path = www/font/jQuery-Mobile-Icon-Pack
+	url = https://github.com/commandelimited/jQuery-Mobile-Icon-Pack

@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="us.dreg.lipetti" version="1.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Lipetti</name>
+    <description>
+        Oispa kaljaa...
+    </description>
+    <author email="dregu@dreg.us" href="http://tanaan.dex.im/">
+        Dregu
+    </author>
+    <icon src='lipetti.png' />
+    <icon src='lipetti_36.png' width='36' height='36' />
+    <icon src='lipetti_48.png' width='48' height='48' />
+    <icon src='lipetti_72.png' width='72' height='72' />
+    <icon src='lipetti_96.png' width='96' height='96' />
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="Fullscreen" value="true" />
+    <preference name="Orientation" value="portrait" />
+    <preference name="DisallowOverscroll" value="true" />
+</widget>

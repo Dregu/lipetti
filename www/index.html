@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8' />
+        <meta name='format-detection' content='telephone=no' />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <!--meta name='viewport' content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi;
+=device-dpi' /-->
+        <meta name='viewport' content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height' />
+        <!--link rel='stylesheet' type='text/css' href='css/index.css' /-->
+        <link rel='stylesheet' type='text/css' href='css/jquery.mobile-1.3.2.min.css' />
+        <link rel='stylesheet' type='text/css' href='css/jqm-icon-pack-fa.css' />
+        <link rel='stylesheet' type='text/css' href='css/lipetti.css' />
+        <title>Lipetti</title>
+    </head>
+    <body>
+        <div id='loginPage' data-role='dialog'>
+            <div data-role='header' data-theme='c'>
+                <h1>Oispa kaljaa...</h1>
+            </div>
+            <div data-role='content' data-theme='c'>
+                    <input id='user' type='text' placeholder='Käyttäjätunnus' />
+                    <input id='pass' type='password' placeholder='Salasana' />
+                    <input id='event' type='text' placeholder='Tapahtuma' />
+                    <fieldset data-role="controlgroup">
+                        <label for='mode'>Hallitusmoodi</label>
+                        <input id='mode' type='checkbox' value='1'>
+                    </fieldset>
+                <br/>
+                <a id='loginButton' href='#' data-role='button' data-theme='a'>Kirjaudu</a>
+            </div>
+        </div>
+        <div id='newPage' data-role='dialog'>
+            <div data-role='header' data-theme='c'>
+                <h1>Tuntematon tagi</h1>
+            </div>
+            <div data-role='content' data-theme='c'>
+                    <div style='text-align: center' id='newTag'></div>
+                    <div style='text-align: center; font-weight: bold'>Käytsä usein täällä?</div>
+                    <input id='newName' type='text' placeholder='Nimi' />
+                    <input id='newUser' type='text' placeholder='Käyttäjätunnus' />
+                    <input id='newPass' type='text' placeholder='Salasana' />
+                <br/>
+                <a href='#' data-role='button' id='newCancel' data-rel='back' data-theme='c'>Peruuta</a>
+                <a id='newButton' href='#' data-role='button' data-theme='a'>Lisää käyttäjä</a>
+            </div>
+        </div>
+        <div id='homePage' data-role='page'>
+            <div data-role='header' data-theme='c' style='text-align: left'>
+                <span id='logged'>oispa kaljaa</span>
+                <a href='#' id='logoutButton' data-icon='delete' data-iconpos='right' class='ui-btn-right'>Kioski kiinni</a>
+            </div>
+            <div data-role='content' data-theme='c'>
+                <div class='status'>Lue kortti...</div>
+                <a href='#' id='barcodeButton' data-icon='barcode' data-role='button' data-theme='a'>Lue viivakoodi</a>
+            </div>
+        </div>
+        <div id='shopPage' data-role='page'>
+            <div data-role='header' data-theme='c' style='text-align: left'>
+                <span id='customer'>oispa kaljaa</span>
+                <a href='#' id='homeButton' data-icon='home' data-iconpos='right' class='ui-btn-right'>Takaisin</a>
+            </div>
+            <div data-role='content' data-theme='c'>
+                <div data-role='controlgroup' data-type='horizontal' class='big'>
+                    <a href='#' data-role='button' id='add' data-theme='a'><input type='tel' id='plus' data-role='none' placeholder='     +' /></a>
+                    <a href='#' data-role='button' id='cash' data-theme='a'>0€</a>
+                    <a href='#' data-role='button' id='buy' data-icon='shopping-cart' data-iconpos='center' data-theme='a'>&nbsp;</a>
+                </div>
+                <div id='items'></div>
+                <div id='total'>Veloitus: 0€</div>
+                <!--input type="range" id="custom" value="0" min="0" max="20" data-highlight="true" /-->
+                <div id='lipetti'>
+                <table>
+                <tr><td class='ruutu'></td><td class='ruutu'></td><td class='ruutu'></td><td class='ruutu'></td><td class='ruutu'></td></tr>
+                <tr><td class='ruutu'></td><td class='ruutu'></td><td class='ruutu'></td><td class='ruutu'></td><td class='ruutu'></td></tr>
+                <tr><td class='ruutu'></td><td class='ruutu'></td><td class='ruutu'></td><td class='ruutu'></td><td class='ruutu'></td></tr>
+                <tr><td class='ruutu'></td><td class='ruutu'></td><td class='ruutu'></td><td class='ruutu'></td><td class='ruutu'></td></tr>
+                </table>
+                </div>
+            </div>
+        </div>
+        <script type='text/javascript' src='cordova.js'></script>
+        <script type='text/javascript' src='barcodescanner.js'></script>
+        <script type='text/javascript' src='js/jquery-1.9.1.min.js'></script>
+        <script type='text/javascript' src='js/lipetti.js'></script>
+        <script type='text/javascript' src='js/index.js'></script>
+        <script type='text/javascript' src='js/jquery.mobile-1.3.2.min.js'></script>
+    </body>
+</html>
